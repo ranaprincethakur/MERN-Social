@@ -1,0 +1,44 @@
+import React, { useState } from "react";
+import "./RightSide.css";
+import Home from "../../img/home.png";
+import Noti from "../../img/noti.png";
+import Comment from "../../img/comment.png";
+import { UilSetting } from "@iconscout/react-unicons";
+import TrendCard from "../trendCard/TrendCard";
+import { Modal } from "antd";
+import ShareForm from "../profileModal/ShareForm";
+import { Link } from "react-router-dom";
+
+const RightSide = () => {
+  const [modalOpened, setModalOpened] = useState(false);
+
+  return (
+    <div className="RightSide">
+      <div className="navIcons">
+        <Link to={"../home"}>
+          <img src={Home} alt="" />
+        </Link>
+        <UilSetting />
+        <img src={Noti} alt="" />
+        <Link to={"../chat"}>
+          <img src={Comment} alt="" />
+        </Link>
+      </div>
+
+      <TrendCard />
+
+      <button className="button r-button" onClick={() => setModalOpened(true)}>
+        Share
+      </button>
+      <Modal
+        onCancel={() => setModalOpened(false)}
+        footer={null}
+        open={modalOpened}
+      >
+        <ShareForm />
+      </Modal>
+    </div>
+  );
+};
+
+export default RightSide;
