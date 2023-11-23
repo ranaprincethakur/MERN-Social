@@ -33,3 +33,6 @@ git clone https://github.com/ranaprincethakur/MERN-Social.git
 cd SocialMedia-App
 run npm install and npm run start in all three directory
 ```
+## Video
+
+https://github.com/ranaprincethakur/MERN-Social/assets/77564766/ebfd78c1-1251-4471-b421-d7b274383d56
